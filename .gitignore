@@ -4,3 +4,4 @@ separated/*
 inputs/*
 outputs/*
 vsts/*
+__pycache__/*
