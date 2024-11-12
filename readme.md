@@ -44,18 +44,15 @@ This will install the necessary libraries for audio separation and processing. N
 
 ## Usage
 
-TODO
-
-The `main.py` script will:
+The `gui.py` script will:
 - Use Demucs to separate speech from background elements.
 - Apply EQ, compression, and limiting.
 - Save the final processed audio as `output.mp3`.
 
-### Example Command:
-
 ```bash
-
+    python gui.py
 ```
+Drag and drop your input file. The output.mp3 will be save in the directory of the input file.
 
 ### Script Explanation
 - **Demucs for Speech Separation**: The AI model Demucs is used to isolate the speech from the background noise and music. This allows the tool to focus on refining just the speech portion for clarity and intelligibility.
