@@ -6,3 +6,4 @@ torchvision
 torchaudio
 --extra-index-url https://download.pytorch.org/whl/cu124
 demucs
+tkinterdnd2
