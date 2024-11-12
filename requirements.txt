@@ -1,5 +1,6 @@
 pedalboard
 soundfile
+pyloudnorm
 torch
 torchvision
 torchaudio
