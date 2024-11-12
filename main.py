@@ -2,6 +2,7 @@ import demucs.separate
 from pedalboard import Pedalboard, load_plugin
 import soundfile as sf
 import pyloudnorm as pyln
+import os
 
 
 def separate_vocals(input_file, mp3_bitrate=320):
@@ -109,7 +110,7 @@ def prepeare_l2_plugin():
     l2_plugin = load_plugin(l2_vst_path)
     l2_plugin.active = True
 
-    l2_plugin.gain = 12.0
+    l2_plugin.gain = 11.0
     l2_plugin.output_level = -1.0
     l2_plugin.oversampling = "2x"
     l2_plugin.true_peak_limiting = True
@@ -145,8 +146,11 @@ def apply_vst(input_file, output_path):
 
 def main(input_file, output_path):
     separate_vocals(input_file)
+    dir_name = os.path.splitext(os.path.basename(input_file))[
+        0
+    ]  # get the name of the file without extension
     print("Separation finished")
-    apply_vst(r"separated\htdemucs\extracted_audio\vocals.mp3", output_path)
+    apply_vst(rf"separated\htdemucs\{dir_name}\vocals.mp3", output_path)
     print("Processing finished")
 
 
