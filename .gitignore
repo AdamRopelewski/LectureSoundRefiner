@@ -1,0 +1,6 @@
+venv
+models
+separated/*
+inputs/*
+outputs/*
+vsts/*
