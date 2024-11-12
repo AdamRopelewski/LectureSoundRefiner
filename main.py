@@ -34,16 +34,17 @@ def prepere_c2_plugin():
     c2_vst_path = "vsts\FabFilter Pro-C 2.vst3"
     c2_plugin = load_plugin(c2_vst_path)
     c2_plugin.active = True
-    c2_plugin.parameters["ratio"].value = 4.0
-    c2_plugin.parameters["threshold"].value = -26.0
-    c2_plugin.parameters["attack"].value = 0.1
-    c2_plugin.parameters["release"].value = 60.0
-    c2_plugin.parameters["auto_release"].value = False
-    c2_plugin.parameters["knee"].value = 2.0
-    c2_plugin.parameters["lookahead"].value = 10.0
-    c2_plugin.parameters["hold"].value = 0.0
-    c2_plugin.parameters["auto_gain"].value = True
-    c2_plugin.parameters["oversampling"].value = "2x"
+    c2_plugin.ratio = "4.00:1"
+    c2_plugin.threshold = -26.0
+    c2_plugin.attack = 0.1
+    c2_plugin.release = 60.0
+    c2_plugin.auto_release = False
+    c2_plugin.knee = 2.0
+    c2_plugin.lookahead = 10.0
+    c2_plugin.hold = 0.0
+    c2_plugin.auto_gain = True
+    c2_plugin.oversampling = "2x"
+
     return c2_plugin
 
 
@@ -52,47 +53,53 @@ def prepare_q3_plugin():
     q3_plugin = load_plugin(q3_vst_path)
     q3_plugin.active = True
 
-    q3_plugin.parameters["band_1_enabled"].value = True
-    q3_plugin.parameters["band_1_gain"].value = 2.0
-    q3_plugin.parameters["band_1_frequency"].value = 155.0
-    q3_plugin.parameters["band_1_q"].value = 1.0
-    q3_plugin.parameters["band_1_shape"].value = "Bell"
-    q3_plugin.parameters["band_1_slope"].value = "12 dB/oct"
+    q3_plugin.band_1_used = "Used"
+    q3_plugin.band_1_enabled = True
+    q3_plugin.band_1_gain = 1.0
+    q3_plugin.band_1_frequency = 155.0
+    q3_plugin.band_1_q = 1.0
+    q3_plugin.band_1_shape = "Bell"
+    q3_plugin.band_1_slope = "12 dB/oct"
 
-    q3_plugin.parameters["band_2_enabled"].value = True
-    q3_plugin.parameters["band_2_gain"].value = -4.5
-    q3_plugin.parameters["band_2_frequency"].value = 490.0
-    q3_plugin.parameters["band_2_q"].value = 1.0
-    q3_plugin.parameters["band_2_shape"].value = "Bell"
-    q3_plugin.parameters["band_2_slope"].value = "12 dB/oct"
+    q3_plugin.band_2_used = "Used"
+    q3_plugin.band_2_enabled = True
+    q3_plugin.band_2_gain = -5.5
+    q3_plugin.band_2_frequency = 490.0
+    q3_plugin.band_2_q = 1.0
+    q3_plugin.band_2_shape = "Bell"
+    q3_plugin.band_2_slope = "12 dB/oct"
 
-    q3_plugin.parameters["band_3_enabled"].value = True
-    q3_plugin.parameters["band_3_gain"].value = 2.0
-    q3_plugin.parameters["band_3_frequency"].value = 2560.0
-    q3_plugin.parameters["band_3_q"].value = 1.0
-    q3_plugin.parameters["band_3_shape"].value = "Bell"
-    q3_plugin.parameters["band_3_slope"].value = "12 dB/oct"
+    q3_plugin.band_3_used = "Used"
+    q3_plugin.band_3_enabled = True
+    q3_plugin.band_3_gain = 3.0
+    q3_plugin.band_3_frequency = 2560.0
+    q3_plugin.band_3_q = 1.0
+    q3_plugin.band_3_shape = "Bell"
+    q3_plugin.band_3_slope = "12 dB/oct"
 
-    q3_plugin.parameters["band_4_enabled"].value = True
-    q3_plugin.parameters["band_4_gain"].value = 5.0
-    q3_plugin.parameters["band_4_frequency"].value = 6900.0
-    q3_plugin.parameters["band_4_q"].value = 1.0
-    q3_plugin.parameters["band_4_shape"].value = "Bell"
-    q3_plugin.parameters["band_4_slope"].value = "12 dB/oct"
+    q3_plugin.band_4_used = "Used"
+    q3_plugin.band_4_enabled = True
+    q3_plugin.band_4_gain = 6.0
+    q3_plugin.band_4_frequency = 6900.0
+    q3_plugin.band_4_q = 1.0
+    q3_plugin.band_4_shape = "Bell"
+    q3_plugin.band_4_slope = "12 dB/oct"
 
-    q3_plugin.parameters["band_5_enabled"].value = True
-    q3_plugin.parameters["band_5_gain"].value = 0.0
-    q3_plugin.parameters["band_5_frequency"].value = 100.0
-    q3_plugin.parameters["band_5_q"].value = 1.0
-    q3_plugin.parameters["band_5_shape"].value = "Low Cut"
-    q3_plugin.parameters["band_5_slope"].value = "36 dB/oct"
+    q3_plugin.band_5_used = "Used"
+    q3_plugin.band_5_enabled = True
+    q3_plugin.band_5_gain = 0.0
+    q3_plugin.band_5_frequency = 100.0
+    q3_plugin.band_5_q = 2.0
+    q3_plugin.band_5_shape = "Low Cut"
+    q3_plugin.band_5_slope = "36 dB/oct"
 
-    q3_plugin.parameters["band_6_enabled"].value = True
-    q3_plugin.parameters["band_6_gain"].value = 0.0
-    q3_plugin.parameters["band_6_frequency"].value = 15000.0
-    q3_plugin.parameters["band_6_q"].value = 1.0
-    q3_plugin.parameters["band_6_shape"].value = "High Cut"
-    q3_plugin.parameters["band_6_slope"].value = "36 dB/oct"
+    q3_plugin.band_6_used = "Used"
+    q3_plugin.band_6_enabled = True
+    q3_plugin.band_6_gain = 0.0
+    q3_plugin.band_6_frequency = 15000.0
+    q3_plugin.band_6_q = 1.0
+    q3_plugin.band_6_shape = "High Cut"
+    q3_plugin.band_6_slope = "36 dB/oct"
 
     return q3_plugin
 
@@ -102,11 +109,11 @@ def prepeare_l2_plugin():
     l2_plugin = load_plugin(l2_vst_path)
     l2_plugin.active = True
 
-    l2_plugin.parameters["output_level"].value = -1.0
-    l2_plugin.parameters["style"].value = "Safe"
-    l2_plugin.parameters["oversampling"].value = "2x"
-    l2_plugin.parameters["true_peak_limiting"].value = True
-    l2_plugin.parameters["gain"].value = 8.0
+    l2_plugin.gain = 12.0
+    l2_plugin.output_level = -1.0
+    l2_plugin.oversampling = "2x"
+    l2_plugin.true_peak_limiting = True
+    # print(l2_plugin.parameters)
 
     return l2_plugin
 
@@ -130,7 +137,8 @@ def apply_vst(input_file, output_path):
     board = Pedalboard([c2_plugin, q3_plugin, l2_plugin])
 
     processed_audio = board(audio, sample_rate)
-    audio_to_save = normlize_peaks(processed_audio)
+    # audio_to_save = normlize_peaks(processed_audio)
+    audio_to_save = processed_audio
 
     save_processed(output_path, audio_to_save, sample_rate)
 
