@@ -143,7 +143,12 @@ def apply_vst(input_file, output_path):
     save_processed(output_path, audio_to_save, sample_rate)
 
 
-separate_vocals("inputs\extracted_audio.mp4")
-print("Separation finished")
-apply_vst(r"separated\\htdemucs\\extracted_audio\\vocals.mp3", "outputs\output.mp3")
-print("Processing finished")
+def main(input_file, output_path):
+    separate_vocals(input_file)
+    print("Separation finished")
+    apply_vst(r"separated\htdemucs\extracted_audio\vocals.mp3", output_path)
+    print("Processing finished")
+
+
+if __name__ == "__main__":
+    main("inputs\extracted_audio.mp4", "outputs\output.mp3")
