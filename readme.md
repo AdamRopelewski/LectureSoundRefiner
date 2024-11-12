@@ -1,7 +1,3 @@
-Here’s an updated version of the README with more detailed information, including installation instructions for the dependencies from `requirements.txt`:
-
----
-
 # Lecture Sound Refiner
 
 **Lecture Sound Refiner** is a Python-based tool designed to enhance the audio quality of lecture recordings. It uses AI to separate speech from other audio elements, then applies compression, EQ and limiting to produce a clean and balanced final MP3 file.
