@@ -5,7 +5,6 @@ import main
 import os
 import threading
 import sys
-import time
 
 
 class ConsoleRedirector:
@@ -20,13 +19,6 @@ class ConsoleRedirector:
 
     def flush(self):
         pass  # Required for compatibility with Python's stdout
-
-
-def run_long_task():
-    for i in range(10):
-        print(f"Processing step {i + 1}/10...")
-        time.sleep(1)  # Simulate a long-running task
-    print("Task completed.")
 
 
 def process_audio(file_path):
