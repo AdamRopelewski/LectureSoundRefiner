@@ -50,7 +50,7 @@ The `gui.py` script will:
 - Save the final processed audio as `output.mp3`.
 
 ```bash
-    python gui.py
+python gui.py
 ```
 Drag and drop your input file. The output.mp3 will be save in the directory of the input file.
 
