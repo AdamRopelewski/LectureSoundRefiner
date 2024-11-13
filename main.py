@@ -144,6 +144,15 @@ def apply_vst(input_file, output_path):
     save_processed(output_path, audio_to_save, sample_rate)
 
 
+def clear_separated_files():
+
+    for root, dirs, files in os.walk("separated", topdown=False):
+        for file in files:
+            os.remove(os.path.join(root, file))  # Remove each file
+        for dir in dirs:
+            os.rmdir(os.path.join(root, dir))  # Remove each empty directory
+
+
 def main(input_file, output_path):
     separate_vocals(input_file)
     dir_name = os.path.splitext(os.path.basename(input_file))[
@@ -152,6 +161,8 @@ def main(input_file, output_path):
     print("Separation finished")
     apply_vst(rf"separated\htdemucs\{dir_name}\vocals.mp3", output_path)
     print("Processing finished")
+    clear_separated_files()
+    print("Temp files removed")
 
 
 if __name__ == "__main__":
